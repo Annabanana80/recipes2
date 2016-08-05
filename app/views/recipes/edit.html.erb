@@ -1,0 +1,26 @@
+<h1 class= "center">Edit Recipe</h1>
+<div class="container">
+<%= form_for @recipe do |f| %>
+  <div>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+ </div>
+ <div>
+    <%= f.label :img %>
+    <%=f.text_field :img %>
+  </div>
+ <div>
+   <%= f.label :description %>
+   <%= f.text_area :description %>
+ </div>
+ <div>
+   <%= f.label :made_it_yet %>
+   <%= f.check_box :made_it_yet %>
+ </div>
+ <div>
+    <%= f.label :directions %>
+    <%= f.text_area :directions %>
+</div>
+ <%= f.submit "Edit Recipe"%>
+<% end %>
+</div>

@@ -1,0 +1,45 @@
+<body>
+  <div class="container">
+<h2 class="col s12; #42a5f5 blue lighten-1"><%= @recipe.title %></h2>
+<div class = "row">
+  <div class="col s6 push-s6">
+  <h4>Directions:</h4> 
+  <pre><%= @recipe.directions %></pre>
+</div>
+<div class="col s6 pull-s6">
+  <div class="show_image"><img style='width: 300px; height 300px; margin:0; padding:0' src= <%= @recipe.img %>  /></div> 
+  <h5>Description:</h5> 
+    <p><%= @recipe.description %></p>
+  <h5>Made it Yet?</h5> 
+    <p><%= @recipe.made_it_yet %></p>
+</div>
+</div>
+<%= link_to "Edit #{@recipe.title}", edit_recipe_path(@recipe) %>
+<br>
+<%= link_to "Delete", recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure?' }
+%>
+<h3>Ingredients</h3>
+<%= link_to "New Ingredient", new_ingredient_path(:recipe_id => @recipe.id)%>
+<table class="striped">
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Available?</th>
+  </tr>
+
+  <% @recipe.ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= ingredient.name %></td>
+      <td><%= ingredient.amount %></td>
+      <td><%= ingredient.is_available %></td>
+       <td><% ingredient.recipe_id %></td>
+      <td><%= link_to "Edit", edit_ingredient_path(ingredient.id)%></td>
+      <td><%= link_to "Delete", ingredient_path(ingredient.id),  method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<br><br>
+<%= link_to "Back to all recipes", recipes_path %><br>
+
+</div>
+</body>

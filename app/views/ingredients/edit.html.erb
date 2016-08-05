@@ -1,0 +1,19 @@
+<h2 class= "center">Edit Ingredients  </h2>
+<div class="container">
+<br>
+<%= form_for @ingredient do |f| %>
+<div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+</div>
+<div>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+</div>
+<div>
+    <%= f.label :is_available %>
+    <%= f.check_box :is_available %>
+</div>
+<%= f.submit "Submit" %>
+<% end %>
+</div>

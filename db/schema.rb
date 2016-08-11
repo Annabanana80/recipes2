@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160803215831) do
   create_table "ingredients", force: :cascade do |t|
     t.string   "name"
     t.decimal  "amount"
+    t.string   "measurement"
     t.boolean  "is_available"
     t.integer  "recipe_id"
     t.datetime "created_at",   null: false

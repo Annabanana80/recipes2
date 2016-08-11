@@ -25,6 +25,7 @@
   <tr>
     <th>Name</th>
     <th>Amount</th>
+    <th>Measurement</th>
     <th>Available?</th>
   </tr>
 
@@ -32,6 +33,7 @@
     <tr>
       <td><%= ingredient.name %></td>
       <td><%= ingredient.amount %></td>
+      <td><%= ingredient.measurement %></td>
       <td><%= ingredient.is_available %></td>
        <td><% ingredient.recipe_id %></td>
       <td><%= link_to "Edit", edit_ingredient_path(ingredient.id)%></td>

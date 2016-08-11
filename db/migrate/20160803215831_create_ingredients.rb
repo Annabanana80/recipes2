@@ -3,6 +3,7 @@ class CreateIngredients < ActiveRecord::Migration[5.0]
     create_table :ingredients do |t|
       t.string :name
       t.decimal :amount
+      t.string :measurement
       t.boolean :is_available
       t.references :recipe, foreign_key: true
 

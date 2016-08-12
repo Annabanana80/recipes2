@@ -37,7 +37,7 @@
       <td><%= ingredient.is_available %></td>
        <td><% ingredient.recipe_id %></td>
       <td><%= link_to "Edit", edit_ingredient_path(ingredient.id)%></td>
-      <td><%= link_to "Delete", ingredient_path(ingredient.id),  method: :delete %></td>
+      <td><%= link_to "Delete", ingredient_path(ingredient.id),  method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
   <% end %>
 </table>
@@ -46,3 +46,4 @@
 
 </div>
 </body>
+<br><br>

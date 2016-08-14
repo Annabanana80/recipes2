@@ -27,9 +27,10 @@ class IngredientsController < ApplicationController
 	#     end
 	# end
 		ingredient = Ingredient.find(params[:id])
-	    ingredient.update(ingredient_params)
+	 	ingredient.update(ingredient_params)
 
-	    redirect_to recipes_url
+	 	redirect_to recipes_url
+
 	end
 	def destroy
 	    ingredient = Ingredient.find(params[:id])

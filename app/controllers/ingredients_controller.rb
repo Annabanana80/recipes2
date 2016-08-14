@@ -7,7 +7,7 @@ class IngredientsController < ApplicationController
 		@recipe = Recipe.find(params[:ingredient][:recipe_id])
    		Ingredient.create(ingredient_params)
   	
-   	redirect_to recipes_url
+   	redirect_to @recipe
 	end
 
 	def edit

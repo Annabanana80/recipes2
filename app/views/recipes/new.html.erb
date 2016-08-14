@@ -1,26 +1,32 @@
-<h1 class= "center">New Recipe</h1>
 <div class="container">
+<h1 class= "center #42a5f5 blue lighten-1">New Recipe</h1>
+<br>
+<div class="#ffffff white">
 <%= form_for @recipe do |f| %>
-  <div>
-    <%= f.label :title %>
+  <div class="center">
+    <%= f.label :title, :style=>"color:black; font-size:17px;" %>
     <%= f.text_field :title %>
   </div>
-  <div>
-    <%= f.label :img %>
+  <div class="center">
+    <%= f.label :img, :style=>"color:black; font-size:17px;" %>
     <%=f.text_field :img %>
   </div>
-  <div>
-    <%= f.label :description %>
+  <div class="center">
+    <%= f.label :description, :style=>"color:black; font-size:17px;" %>
     <%= f.text_area :description %>
   </div>
-  <div>
-    <%= f.label :made_it_yet %>
+  <div class="center">
+    <button class="waves-effect waves-light #42a5f5 blue lighten-1"><%= f.label :made_it_yet, :style=>"color:black; font-size:17px;" %>
     <%= f.check_box :made_it_yet %>
   </div>
-  <div>
-    <%= f.label :directions %>
+  <div class="center">
+    <%= f.label :directions, :style=>"color:black; font-size:17px;" %>
     <%= f.text_area :directions %>
 </div>
-  <%= f.submit "New Recipe" %>
+  <div class="center"><button class="waves-effect waves-light #42a5f5 blue lighten-1"><%= f.submit "Submit" %></button></div>
 <% end %>
 </div>
+</div>
+<br><br>
+<div class="center"><button class="waves-effect waves-light #ffffff white"><%= link_to "Back to all recipes", recipes_path %></button></div>
+<br>

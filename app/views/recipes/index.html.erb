@@ -1,10 +1,10 @@
 <body>
 <div class="container">
-<h1 class="center col s12; #42a5f5 blue lighten-1">Recipe Saver</h1>
+<h1 class="center col s12; teal lighten-2">Recipe Saver</h1>
 
-<div class="center"><button class="waves-effect waves-light #ffffff white"><%= link_to "Add a New Recipe", new_recipe_path %></button></div>
+<div class="center"><button class="waves-effect waves-light #ffffff white"><%= link_to "Add a New Recipe", new_recipe_path, :style=>"color:teal;" %></button></div>
 <br><br>
-<table class="striped #42a5f5 blue lighten-1">
+<table class="striped teal lighten-2">
   <tr>
     <th>Title</th>
     <th>Image</th>
@@ -14,7 +14,7 @@
 
   <% @recipes.each do |recipe| %>
     <tr>
-      <td><button class="waves-effect waves-light #ffffff white" style="width:100%"><%= link_to recipe.title, recipe %></td></button>
+      <td><button class="waves-effect waves-light #ffffff white" style="width:100%"><%= link_to recipe.title, recipe, :style=>"color:teal;" %></td></button>
       <td><img style='width: 100px; height 100px;' src =<%= recipe.img %> /></td>
       <td><%= recipe.description %></td>
       <td><%= recipe.made_it_yet %></td>

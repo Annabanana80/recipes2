@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class= "center #42a5f5 blue lighten-1">Edit Recipe</h1>
+<h1 class= "center teal lighten-2">Edit Recipe</h1>
 <br>
 <div class="#ffffff white">
 <%= form_for @recipe do |f| %>
@@ -16,17 +16,20 @@
    <%= f.text_area :description %>
  </div>
  <div class="center">
-   <button class="waves-effect waves-light #42a5f5 blue lighten-1"><%= f.label :made_it_yet, :style=>"color:black; font-size:17px;" %></button>
-   <%= f.check_box :made_it_yet %>
+   <%= f.label :made_it_yet, :style=>"color:black; font-size:17px;" %><br>
+   <%= f.radio_button :made_it_yet, true%>
+   <%= f.label :made_it_yet, "Yes", :value => "true", :style=>"color:black;"  %>
+   <%= f.radio_button :made_it_yet, false, :checked => true%>
+   <%= f.label :made_it_yet, "No",:value => "false", :style=>"color:black;" %>
  </div>
  <div class="center">
     <%= f.label :directions, :style=>"color:black; font-size:17px;" %>
     <%= f.text_area :directions %>
 </div>
- <div class="center"><button class="waves-effect waves-light #42a5f5 blue lighten-1"><%= f.submit "Submit"%></button></div>
+ <div class="center"><button class="waves-effect waves-light teal lighten-2"><%= f.submit "Submit"%></button></div>
 <% end %>
 </div>
 </div>
 <br><br>
-<div class="center"><button class="waves-effect waves-light #ffffff white"><%= link_to "Back to all recipes", recipes_path %></button></div>
+<div class="center"><button class="waves-effect waves-light #ffffff white"><%= link_to "Back to all recipes", recipes_path, :style=>"color:teal;" %></button></div>
 <br>
